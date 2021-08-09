@@ -42,6 +42,7 @@
 
         <a class="btn btn-success" href="add-todo">Add</a>
 </form>
+    <h1 id="mes">${errorMessage}</h1>
     <div class="container2">
         <h2>Categories</h2>
         <table class="table table-striped">
@@ -61,6 +62,9 @@
 
                     <td> <a type="button" class="btn btn-primary"
                             href="delete-todo?id=${todo.catcode}">Delete</a></td>
+
+                    <td> <a type="button" class="btn btn-primary" onmouseout="myFunction()"
+                            href="see-todo?id=${todo.catcode}">Items</a></td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -71,6 +75,10 @@
     </div>
 
     <script>
+
+        function myFunction(){
+            document.getElementById("mes").innerHTML="";
+        }
 
 
     </script>

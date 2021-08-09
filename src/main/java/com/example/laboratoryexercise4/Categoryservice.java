@@ -1,8 +1,12 @@
 package com.example.laboratoryexercise4;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -29,6 +33,7 @@ public class Categoryservice {
     }
 
     public void addTodo(String catcode, String catdesc){
+
         todos.add(new Category(catcode,catdesc));
     }
 
